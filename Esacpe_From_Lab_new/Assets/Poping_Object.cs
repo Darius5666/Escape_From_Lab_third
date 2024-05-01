@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using System.ComponentModel;
 
 public class Poping_Object : MonoBehaviour
 {
@@ -10,12 +11,16 @@ public class Poping_Object : MonoBehaviour
     public Button Background;
     public int Tasknum;
     private bool isClick=false;
-    public GameObject me; 
+    public GameObject me;
+    public GameObject unlock;
+    private int[] complete;
     void Start()
     {
-        
-        Button btn=Target.GetComponent<Button>();
+
+        Button btn = Target.GetComponent<Button>();
         Button button=Background.GetComponent<Button>();
+        complete = unlock.GetComponent<UnlockSys>().complete;
+        complete[Tasknum] = 0;
         Target_Img.enabled = false;
         btn.onClick.AddListener(ShowImage);
         button.onClick.AddListener(GoBack);
@@ -30,8 +35,9 @@ public class Poping_Object : MonoBehaviour
     void ShowImage()
     {
         me.SetActive(false);
+        complete[Tasknum] = 1;
         Target_Img.enabled = true;
-            Debug.Log(isClick);
+        Debug.Log(complete[Tasknum]);
         isClick= true;
         
     }
