@@ -13,14 +13,14 @@ public class Poping_Object : MonoBehaviour
     private bool isClick=false;
     public GameObject me;
     public GameObject unlock;
-    private int[] complete;
+    private int[] completed;
     void Start()
     {
 
         Button btn = Target.GetComponent<Button>();
         Button button=Background.GetComponent<Button>();
-        complete = unlock.GetComponent<UnlockSys>().complete;
-        complete[Tasknum] = 0;
+        completed = unlock.GetComponent<UnlockSys>().complete;
+        completed[Tasknum] = 0;
         Target_Img.enabled = false;
         btn.onClick.AddListener(ShowImage);
         button.onClick.AddListener(GoBack);
@@ -35,9 +35,8 @@ public class Poping_Object : MonoBehaviour
     void ShowImage()
     {
         me.SetActive(false);
-        complete[Tasknum] = 1;
+        completed[Tasknum] = 1;
         Target_Img.enabled = true;
-        Debug.Log(complete[Tasknum]);
         isClick= true;
         
     }
