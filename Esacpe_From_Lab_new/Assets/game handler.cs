@@ -23,5 +23,4 @@ public class gamehandler : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,
     {
         Debug.Log("OnPointerDown");
     }
-
 }
