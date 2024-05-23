@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class gamehandler : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,IDragHandler
+public class gamehandler : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,IDragHandler,IEndDragHandler
 {
     private RectTransform rectTransform;
     private void Awake() {
@@ -16,12 +16,16 @@ public class gamehandler : MonoBehaviour, IPointerDownHandler,IBeginDragHandler,
     }
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("OnEndDrag");
+        Debug.Log("OnDrag");
         rectTransform.anchoredPosition += eventData.delta;
     }
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("OnPointerDown");
+    }
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        Debug.Log("OnEndDrag");
     }
 
 }
