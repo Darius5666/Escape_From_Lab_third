@@ -6,19 +6,15 @@ using UnityEngine.EventSystems;
 
 public class Itemslot : MonoBehaviour,IDropHandler
 {
+    public GameObject me;
+    public GameObject Trans;
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("OnDrop");
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+        if (eventData.pointerDrag != null)
+        {
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition=GetComponent<RectTransform>().anchoredPosition;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+         }
     }
 }
