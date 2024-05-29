@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 98059925}
   - component: {fileID: 98059924}
   - component: {fileID: 98059926}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21081251, y: 0.7628149}
   m_AnchorMax: {x: 0.21081251, y: 0.7628149}
-  m_AnchoredPosition: {x: -12, y: 1.4000244}
+  m_AnchoredPosition: {x: -202, y: 82.28}
   m_SizeDelta: {x: 124.600006, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &98059924
@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 241915044}
   - component: {fileID: 241915043}
   - component: {fileID: 241915047}
+  - component: {fileID: 241915048}
   m_Layer: 5
   m_Name: Tape
   m_TagString: Untagged
@@ -565,7 +566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.18062499, y: 0.7804815}
   m_AnchorMax: {x: 0.18062499, y: 0.7804815}
-  m_AnchoredPosition: {x: 1170.2401, y: -552.73535}
+  m_AnchoredPosition: {x: 1305, y: -643}
   m_SizeDelta: {x: 2585.4, y: 1461.1353}
   m_Pivot: {x: 0.47, y: 0.57}
 --- !u!114 &241915043
@@ -631,6 +632,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &241915048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241915041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b44f9f10f0d71d4694c232e884ed639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monitor: {fileID: 98059922}
+  monitoroff: {fileID: 272170691}
 --- !u!1 &272170691
 GameObject:
   m_ObjectHideFlags: 0
