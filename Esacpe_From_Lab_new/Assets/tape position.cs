@@ -10,20 +10,27 @@ public class tapeposition : MonoBehaviour
     public GameObject tape;
     float PosX;
     float PosY;
+    float TPosX;
+    float TPosY;
     // Start is called before the first frame update
     void Start()
     {PosX=GetComponent<RectTransform>().anchoredPosition.x;
      PosY=GetComponent<RectTransform>().anchoredPosition.y;
+     TPosX = monitor.GetComponent<RectTransform>().anchoredPosition.x;
+     TPosY = monitor.GetComponent<RectTransform>().anchoredPosition.y;
+        monitoroff.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
-    {if ((PosX== -202) && ( PosY== 82.28))
+    {
+        PosX = GetComponent<RectTransform>().anchoredPosition.x;
+        PosY = GetComponent<RectTransform>().anchoredPosition.y;
+        Debug.Log(PosX + " " + PosY);
+        if ((PosX == TPosX) && ( PosY == TPosY))
         {
-            monitor.SetActive(false);
             monitoroff.SetActive(true);
-            tape.SetActive(false);
-
+            monitor.SetActive(false);
         }
      
     }
