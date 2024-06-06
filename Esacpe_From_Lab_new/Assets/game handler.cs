@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class gamehandler : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {   [SerializeField ] private Canvas canvas;
+    public int index;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private void Awake() {
