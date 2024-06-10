@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class UnlockSys : MonoBehaviour
 {
-    public GameObject locker;
+    public Image locker;
     public int tasknum;
     [HideInInspector]
     public int[] complete;
@@ -12,7 +13,7 @@ public class UnlockSys : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        locker.SetActive(false);
+        locker.enabled=false;
         complete = new int[tasknum];
 
     }
@@ -32,7 +33,8 @@ public class UnlockSys : MonoBehaviour
         }
         if (iscomplete)
         {
-            locker.SetActive(true);
+            Debug.Log("Hi");
+            locker.enabled=true;
         }
     }
 }
